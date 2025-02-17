@@ -13,6 +13,8 @@ case $operation in
 "Add") result=$((num1+num2)) ;;
 "Subtraction") result=$((num1-num2)) ;;
 "Multiplication") result=$((num1*num2)) ;;
+"Divide") result=$((num1/num2)) ;;
+*)
 esac
 
 echo "Result: $result"
@@ -22,6 +24,8 @@ echo "Enter salary: "
 read salary
 if [ "$salary" -lt 20000 ]; then
 tax =0
+elif [ "$salary" -eq 20000 ]; then
+tax=$99salary * 2 / 100))
 elif [ "$salary" -gt 20000 ] && [ "$salary" -le 40000 ]; then
 tax=$((salary * 5 / 100))
 elif [ "$salary" -gt 40000 ]; then
